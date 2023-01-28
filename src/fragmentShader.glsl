@@ -23,12 +23,17 @@ void main(void) {
     float n = 5.0;
     float col = 0.0;
 
+    if(length(uv) >= 0.3) {
+        gl_FragColor = vec4(0, 0, 0, 1.0);
+        return;
+    }
+
     for(float i = u_time; i <= u_time + n; i += 0.02) {
-        float x = sin(a * i + p1) * pow(2.0, cos(i)) / 5.0;
-        float y = cos(b * i + p2) * pow(2.0, sin(i)) / 5.0;
+        float x = sin(a * i + p1) * pow(2.0, cos(i)) / 8.0;
+        float y = cos(b * i + p2) * pow(2.0, sin(i)) / 8.0;
         vec2 di = vec2(x, y);
         float dis = length(uv - di);
-        col += clamp(1.0 - dis * 40.0, 0.0, 1.0);
+        col += clamp(1.0 - dis * 50.0, 0.0, 1.0);
     }
 
     gl_FragColor = vec4(col, log(col), sqrt(col), 1.0);
