@@ -2,7 +2,7 @@
 
 <p align="center">
    <div style="width:640;height:320">
-       <img style="width: inherit" src="https://raw.githubusercontent.com/Timmoth/parametric-curve/main/image.png">
+       <img style="width: inherit" src="https://raw.githubusercontent.com/Timmoth/parametric-curve/main/parametric-curve.png">
 </div>
 </p>
 
